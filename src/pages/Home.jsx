@@ -43,7 +43,7 @@ const Home = () => {
             </a>
             <a
               className="inline-flex justify-center items-center px-6 py-4 bg-transparent border-2 border-primary text-primary font-body-md text-body-md font-bold rounded-lg hover:bg-primary/5 transition-colors duration-200 active:scale-95"
-              href="https://shrouded-universe-4c1.notion.site/Full-Stack-Cohort-1-Curriculum-Index-376210d2e88e80c8b32af77eca6524c1"
+              href="https://kani-group.notion.site/Full-Stack-Cohort-1-Curriculum-Index-376210d2e88e80c8b32af77eca6524c1"
             >
               View Full Curriculum
             </a>
