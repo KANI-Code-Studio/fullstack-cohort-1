@@ -1,0 +1,178 @@
+body {
+  background-color: #f9fafb; /* Level 0 Canvas */
+  color: #1b1b24;
+}
+
+/* Ambient Shadows & Lego Layers */
+.lego-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lego-card:hover {
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 2px rgba(53, 37, 205, 0.2);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Tech Chips */
+.tech-chip-react {
+  background-color: rgba(97, 218, 251, 0.1);
+  color: #007bb5;
+}
+.tech-chip-mongo {
+  background-color: rgba(71, 162, 72, 0.1);
+  color: #116149;
+}
+.tech-chip-fastapi {
+  background-color: rgba(0, 150, 136, 0.1);
+  color: #00695c;
+}
+
+.float-y-1 {
+  animation: floatY 3s ease-in-out infinite;
+}
+.float-y-2 {
+  animation: floatY 3.5s ease-in-out infinite 0.5s;
+}
+.float-y-3 {
+  animation: floatY 4s ease-in-out infinite 1s;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Code Block */
+.code-block {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    transition: opacity 0.8s ease;
+    transform: none;
+  }
+  .lego-card {
+    transition: box-shadow 0.3s ease;
+  }
+  .lego-card:hover {
+    transform: none;
+  }
+  .float-y-1,
+  .float-y-2,
+  .float-y-3 {
+    animation: none;
+  }
+  .mesh-bg {
+    animation: none !important;
+  }
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+/* Hide Top Nav on Mobile */
+.desktop-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3525cd, #6ffbbe);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(53, 37, 205, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(0, 108, 73, 0.15) 0%,
+      transparent 50%
+    );
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #6cf8bb;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+}
+
+.lego-notch-top {
+  clip-path: polygon(
+    0% 0%,
+    10% 0%,
+    15% 20px,
+    85% 20px,
+    90% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+body {
+  min-height: max(884px, 100dvh);
+}
