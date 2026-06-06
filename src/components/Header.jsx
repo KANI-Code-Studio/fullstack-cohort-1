@@ -11,7 +11,7 @@ const Header = () => {
           {/* > */}
           {/*   layers */}
           {/* </span> */}
-          <img src="./kani_icon.png" alt="" class="text-primary h-10"></img>
+          <img src="/course/fullstack-cohort-1/kani_icon.png" alt="" class="text-primary h-10"></img>
           <span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
             KANI
           </span>
