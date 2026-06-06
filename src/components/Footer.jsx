@@ -4,7 +4,7 @@ const Footer = () => {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start max-w-container-max mx-auto gap-8">
         <div class="flex flex-col gap-4">
           <span class="font-headline-sm text-headline-sm flex items-center font-bold text-primary">
-            <img src="./kani_icon.png" class="h-10 w-10" alt="" />
+            <img src="/course/fullstack-cohort-1/kani_icon.png" class="h-10 w-10" alt="" />
              KANI
           </span>
           <p class="font-body-md text-body-md text-on-surface-variant">
